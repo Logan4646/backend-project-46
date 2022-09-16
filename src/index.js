@@ -12,8 +12,8 @@ const genDiff = (filepath1, filepath2) => {
   const file2format = extractFormat(filepath2);
   const fileContent1 = readFile(filepath1);
   const fileContent2 = readFile(filepath2);
-	const obj1 = parse(file1format, fileContent1);
-	const obj2 = parse(file2format, fileContent2);
+  const obj1 = parse(file1format, fileContent1);
+  const obj2 = parse(file2format, fileContent2);
   const innerTree = buildTree(obj1, obj2);
   return format(innerTree);
 };
