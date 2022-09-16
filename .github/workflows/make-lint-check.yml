@@ -1,0 +1,9 @@
+name: make lint check
+on: push
+jobs:
+        build:
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: actions/checkout@v2
+                        - run: npm install --save-dev eslint-config-airbnb-base
+                        - run: make lint
