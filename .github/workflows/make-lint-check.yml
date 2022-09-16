@@ -1,12 +1,10 @@
-name: makelint
-
-on: 
-  - push
+name: make lint check
+on: push
 env:
   CI: true
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     strategy:
        matrix:
