@@ -4,5 +4,7 @@ publish:
 	npm publish --dry-run
 lint:
 	npx eslint .
-make test-coverage:
-	npx jest
+test:
+	npx jest --coverage
+test-coverage:
+	npx jest --bail --coverage --coverageProvider=v8
