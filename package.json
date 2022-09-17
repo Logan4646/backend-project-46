@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Logan4646/backend-project-46.git"
   },
-  "author": "Logan4646",
+  "author": "Logan46",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
