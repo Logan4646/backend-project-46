@@ -5,13 +5,13 @@
   "description": "Compares two configuration files and shows a difference.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Logan4646/backend-project-46.git"
   },
-  "author": "Logan46",
+  "author": "Logan4646",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
