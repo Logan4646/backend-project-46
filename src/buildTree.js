@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export default (data1, data2) => {
+const buildTree = (data1, data2) => {
   const keys = Object.keys({ ...data1, ...data2 });
   const sortedKeys = _.sortBy(keys);
   return sortedKeys.map((key) => {
@@ -12,6 +12,9 @@ export default (data1, data2) => {
     if (!_.has(data2, key)) {
       return { type: 'remove', key, val: value1 };
     }
+    if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
+      return { type: 'recursion', key, children: buildTree(value1, value2) };
+    }
     if (!_.isEqual(value1, value2)) {
       return {
         type: 'updated', key, val1: value1, val2: value2,
@@ -20,3 +23,4 @@ export default (data1, data2) => {
     return { type: 'same', key, val: value1 };
   });
 };
+export default buildTree;
