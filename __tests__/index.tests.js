@@ -22,6 +22,11 @@ test('testing result for tree files yml', () => {
   const actual = genDiff(getFixturePath('treefile1.yml'), getFixturePath('treefile2.yml'));
   expect(actual).toBe(expected);
 });
+test('testing result for tree files plain', () => {
+  const expected = readFile('plainFile.txt');
+  const actual = genDiff(getFixturePath('treefile1.json'), getFixturePath('treefile2.json'), 'plain');
+  expect(actual).toBe(expected);
+});
 test('testing stylish for plain files throw parsers', () => {
   expect(() => parsers('mjs')).toThrow('Формат не поддерживается: mjs');
 });
