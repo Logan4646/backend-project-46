@@ -19,4 +19,6 @@ Example for plain json file:
 Example for tree yml file:  
 [![asciicast](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7.png)](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7)
 Example for plain format:
-[![asciicast](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW.png)](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW)  
+[![asciicast](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW.png)](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW)
+Example for json format:
+[![asciicast](https://asciinema.org/a/auOyVvUm1tVi419au8IvI0dsg.png)](https://asciinema.org/a/auOyVvUm1tVi419au8IvI0dsg)  
