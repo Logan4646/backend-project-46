@@ -20,6 +20,7 @@ const plain = (innerTree) => {
         case 'remove':
           return `Property '${property}' was removed`;
         case 'updated':
+          // eslint-disable-next-line max-len
           return `Property '${property}' was updated. From ${stringify(node.val1)} to ${stringify(node.val2)}`;
         case 'recursion':
           return `${format(node.children, property)}`;
