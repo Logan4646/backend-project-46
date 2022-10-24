@@ -17,4 +17,6 @@ sudo npm link
 Example for plain json file:  
 [![asciicast](https://asciinema.org/a/V5dH1MP7iyr982IYTA7vs8riD.png)](https://asciinema.org/a/V5dH1MP7iyr982IYTA7vs8riD)  
 Example for tree yml file:  
-[![asciicast](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7.png)](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7)  
+[![asciicast](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7.png)](https://asciinema.org/a/HUMI8ZDrXbhb0UTeuu53QxbW7)
+Example for plain format:
+[![asciicast](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW)](https://asciinema.org/a/s0OoIwOFrmuCaHoUht67XeJcW)  
