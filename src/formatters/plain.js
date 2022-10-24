@@ -6,7 +6,7 @@ const stringify = (value) => {
   } if (value === null) {
     return null;
   }
-  return String(value);
+  return `${value}`;
 };
 
 const plain = (innerTree) => {
@@ -29,5 +29,4 @@ const plain = (innerTree) => {
     }).join('\n');
   return format(innerTree, 0);
 };
-
 export default plain;
