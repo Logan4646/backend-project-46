@@ -13,37 +13,32 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-test('testing result for tree files stylish format jsonFiles', () => {
+test('testing result for tree files stylish/json', () => {
   const expected = readFile('testFile.txt');
   const actual = genDiff(getFixturePath('treefile1.json'), getFixturePath('treefile2.json'), 'stylish');
   expect(actual).toBe(expected);
 });
-test('testing result for tree files stylish format ymlFiles', () => {
+test('testing result for tree files stylish/yml', () => {
   const expected = readFile('testFile.txt');
   const actual = genDiff(getFixturePath('treefile1.yml'), getFixturePath('treefile2.yml'));
   expect(actual).toBe(expected);
 });
-test('testing result for tree files plain format jsonFiles', () => {
+test('testing result for tree files plain/json', () => {
   const expected = readFile('plainFile.txt');
   const actual = genDiff(getFixturePath('treefile1.json'), getFixturePath('treefile2.json'), 'plain');
   expect(actual).toBe(expected);
 });
-test('testing result for tree files json format jsonFiles', () => {
+test('testing result for tree files json/json', () => {
   const expected = readFile('jsonFile.txt');
   const actual = genDiff(getFixturePath('treefile1.json'), getFixturePath('treefile2.json'), 'json');
   expect(actual).toBe(expected);
 });
-test('testing stylish for plain files throw parsers', () => {
+test('testing throw parsers', () => {
   expect(() => parsers('mjs')).toThrow('Формат не поддерживается: mjs');
 });
-test('testing format for throw formatters', () => {
+test('testing throw formatters', () => {
   const a = [{ type: '1' }];
   expect(() => format(a, 2)).toThrow('Формат не поддерживается: 2');
-});
-test('testing format for json', () => {
-  const a = { x: 5 };
-  const b = format(a, 'json');
-  expect(b).toBe('{"x":5}');
 });
 test('testing stylish for throw wrong type', () => {
   const a = [{ type: 'sam' }];
