@@ -29,7 +29,7 @@ const stylish = (innerTree) => {
       case 'recursion':
         return `${makeIndent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1).join('')}${makeIndent(depth)}  }\n`;
       default:
-        throw new Error(`Этого типа не существует: ${node.type}`);
+        throw new Error(`This type does not exist: ${node.type}`);
     }
   });
   return `{\n${iter(innerTree, 1).join('')}}`;

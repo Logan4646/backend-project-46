@@ -24,7 +24,7 @@ const plain = (innerTree) => {
         case 'recursion':
           return `${format(node.children, property)}`;
         default:
-          throw new Error(`Такого типа не существует: ${node.type}`);
+          throw new Error(`This type does not exist: ${node.type}`);
       }
     }).join('\n');
   return format(innerTree, 0);

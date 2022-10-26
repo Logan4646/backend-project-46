@@ -18,9 +18,9 @@ test('testing result for tree files stylish/json', () => {
   const actual = genDiff(getFixturePath('treefile1.json'), getFixturePath('treefile2.json'), 'stylish');
   expect(actual).toBe(expected);
 });
-test('testing result for tree files stylish/yml', () => {
+test('testing result for tree files stylish/yml-yaml', () => {
   const expected = readFile('testFile.txt');
-  const actual = genDiff(getFixturePath('treefile1.yml'), getFixturePath('treefile2.yml'));
+  const actual = genDiff(getFixturePath('treefile1.yml'), getFixturePath('treefile2.yaml'));
   expect(actual).toBe(expected);
 });
 test('testing result for tree files plain/json', () => {
@@ -34,17 +34,17 @@ test('testing result for tree files json/json', () => {
   expect(actual).toBe(expected);
 });
 test('testing throw parsers', () => {
-  expect(() => parsers('mjs')).toThrow('Формат не поддерживается: mjs');
+  expect(() => parsers('mjs')).toThrow('Unknown format: mjs');
 });
 test('testing throw formatters', () => {
   const a = [{ type: '1' }];
-  expect(() => format(a, 2)).toThrow('Формат не поддерживается: 2');
+  expect(() => format(a, 2)).toThrow('Unknown format: 2');
 });
 test('testing stylish for throw wrong type', () => {
   const a = [{ type: 'sam' }];
-  expect(() => stylish(a)).toThrow(new Error('Этого типа не существует: sam'));
+  expect(() => stylish(a)).toThrow(new Error('This type does not exist: sam'));
 });
 test('testing plain for throw wrong type', () => {
   const a = [{ type: 'samo' }];
-  expect(() => plain(a)).toThrow(new Error('Такого типа не существует: samo'));
+  expect(() => plain(a)).toThrow(new Error('This type does not exist: samo'));
 });
